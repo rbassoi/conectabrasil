@@ -5,7 +5,7 @@ const { google } = require('googleapis');
 // ID da sua planilha (pode ser encontrado na URL)
 const SPREADSHEET_ID = '1qbOpWkbaPRPW9rHuNIARPYFPoOUOdNBAxH3xw__n5Ao'; 
 // Intervalo de dados que você quer buscar (ex: 'Página1!A:C' para as colunas A, B e C)
-const RANGE = 'Backhal!A:D';
+const RANGE = 'Backhal!A:F';
 // Duração do cache em segundos (300s = 5 minutos)
 const CACHE_DURATION_IN_SECONDS = 300; 
 // ------------------------------------
@@ -88,4 +88,5 @@ module.exports = async (req, res) => {
     return res.status(500).json({ error: 'Falha ao buscar dados da planilha.', details: error.message });
   }
 };
+
 
